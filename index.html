@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Emergency Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        header {
+            background-color: #c0392b;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .emergency {
+            text-align: left;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 15px;
+        }
+        h2 {
+            color: #c0392b;
+        }
+        img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #c0392b;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #a93226;
+        }
+    </style>
+</head>
+<body>
+    <header>Medical Emergency Guide</header>
+    <div class="container">
+        
+        <script>
+            const emergencies = [
+                {title: "Heart Attack", description: "Symptoms : Chest pain or discomfort, shortness of breath, nausea, cold sweat, pain radiating to the arm, neck, or jaw......... *First Aid : 1. Call emergency services immediately. 2. Have the person sit down and rest.3. If they are conscious and not allergic, give them aspirin (if available) to chew.4. Monitor their breathing and be prepared to perform CPR if they become unresponsive.", image: "heart_attack.jpg"},
+                {title: "Choking", description: "If the person is unable to cough, speak, or breathe, stand behind them and perform the Heimlich maneuver: wrap your arms around their waist, make a fist, place it above their navel, and thrust inward and upward forcefully. Repeat until the object is expelled. If they become unconscious, begin CPR immediately.", image: "choking.jpg"},
+                {title: "Burns", description: "For minor burns, hold the affected area under cool running water for at least 10 minutes. Do not apply ice. Cover with a sterile dressing. For severe burns, do not remove clothing stuck to the burn. Cover with a clean cloth and seek medical help immediately.", image: "burns.jpg"},
+                {title: "Stroke", description: "Use the FAST method to recognize a stroke: Face drooping, Arm weakness, Speech difficulty, Time to call emergency services. Keep the person still and comfortable, monitor their breathing, and do not give them food or drink.", image: "stroke.jpg"},
+                {title: "Severe Bleeding", description: "Apply direct pressure to the wound with a clean cloth. If bleeding does not stop, apply more pressure and elevate the wound above heart level if possible. Do not remove embedded objects—apply pressure around them and seek medical help.", image: "bleeding.jpg"},
+                {title: "Fractures", description: "Immobilize the injured limb using a splint or support. Do not move the person unless necessary. Apply ice packs to reduce swelling and seek medical help immediately.", image: "fracture.jpg"},
+                {title: "Shock", description: "Symptoms include pale skin, rapid breathing, and weak pulse. Lay the person down, elevate their legs if possible, and cover them with a blanket. Keep them calm and monitor their breathing until help arrives.", image: "shock.jpg"},
+                {title: "Poisoning", description: "Call poison control immediately. Identify the poison and follow medical instructions. Do not induce vomiting unless instructed. If unconscious, check breathing and prepare for CPR.", image: "poisoning.jpg"},
+                {title: "Seizures", description: "Move dangerous objects away. Do not restrain the person or put anything in their mouth. Time the seizure; if it lasts longer than 5 minutes, call emergency services. After the seizure, turn them onto their side and monitor breathing.", image: "seizure.jpg"},
+                {title: "Heat Stroke", description: "Symptoms include confusion, nausea, and high body temperature. Move the person to a cool place, remove excess clothing, and cool them down with water or fans. Provide fluids if they are conscious.", image: "heat_stroke.jpg"},
+                {title: "Hypothermia", description: "Signs include shivering, confusion, and slow breathing. Move the person to a warm place, remove wet clothing, and wrap them in blankets. Do not use direct heat sources like hot water or fires.", image: "hypothermia.jpg"},
+                {title: "Snake Bite", description: "Keep the person still to slow venom spread. Immobilize the affected limb and keep it below heart level. Do not suck out venom or use a tourniquet. Seek emergency medical help immediately.", image: "snake_bite.jpg"},
+                {title: "Electric Shock", description: "Turn off the power source if safe. Do not touch the person until power is off. Check breathing and pulse; begin CPR if needed. Call emergency services immediately.", image: "electric_shock.jpg"},
+                {title: "Asthma Attack", description: "Help the person use their inhaler. Keep them calm and seated in an upright position. If symptoms persist after multiple inhaler uses, seek emergency help.", image: "asthma.jpg"},
+                {title: "Drowning", description: "Pull the person out of the water, check for breathing, and begin CPR if necessary. Remove wet clothing and keep them warm.", image: "drowning.jpg"},
+                {title: "Allergic Reactions", description: "Identify the trigger, if possible. Use an epinephrine auto-injector (EpiPen) if available. Call emergency services and monitor breathing.", image: "allergy.jpg"},
+                {title: "Panic Attack", description: "Encourage slow, deep breathing. Reassure the person and help them focus on something steady. If symptoms persist, seek medical attention.", image: "panic_attack.jpg"}
+            ];
+
+            const container = document.querySelector('.container');
+            emergencies.forEach(emergency => {
+                const div = document.createElement('div');
+                div.classList.add('emergency');
+                div.innerHTML = `<h2>${emergency.title}</h2><p>${emergency.description}</p><img src="${emergency.image}" alt="First aid for ${emergency.title}">`;
+                container.appendChild(div);
+            });
+        </script>
+        
+    </div>
+</body>
+</html>
